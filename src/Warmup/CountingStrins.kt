@@ -4,7 +4,7 @@ fun main() {
     countStrings("abcac", 10);
 }
 
-fun countStrings(subString: String, listSize: Long): Int {
+fun countStrings(subString: String, listSize: Long): Long {
     var myMap: HashMap<Int, Int> = HashMap();
     var count = 0;
     for (i in 0..subString.length - 1) {
@@ -24,7 +24,5 @@ fun countStrings(subString: String, listSize: Long): Int {
     } ?: run {
         moreLeftOcc = 0;
     }
-    val occurence = (equallyDivide * count) + moreLeftOcc;
-    println("In: " + equallyDivide + " so a are: " + occurence);
-    return 1;
+    return (equallyDivide * count) + moreLeftOcc;
 }
